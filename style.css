@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Happy+Monkey&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #a5c9ca;
+}
+nav {
+    background-color: #2c3333;
+    color: white;
+    height: 50px;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    font-family: "Happy Monkey", cursive;
+}
+nav ul {
+    list-style: none;
+}
+.gamecontainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.container {
+    display: grid;
+    grid-template-rows: repeat(3, 10vw);
+    grid-template-columns: repeat(3, 10vw);
+    margin-right: 30px;
+}
+.line {
+    position: absolute;
+    background-color: #2e4f4f;
+    width: 20vw;
+    border-radius: 2px;
+    height: 3px;
+    left: 0%;
+    display: none;
+}
+.box {
+    border: 2px solid #2e4f4f;
+    font-size: 4vw;
+    color: #2e4f4f;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.box:hover {
+    background-color: #baeded;
+}
+.gameinfo {
+    display: flex;
+    margin-top: 20px;
+    margin-left: 30px;
+    flex-direction: column;
+}
+.br-0 {
+    border-right: 0;
+}
+.bl-0 {
+    border-left: 0;
+}
+.bt-0 {
+    border-top: 0;
+}
+.bb-0 {
+    border-bottom: 0;
+}
+.btn {
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    width: 100px;
+    height: 30px;
+    background-color: #2e4f4f;
+    color: white;
+    font-family: "Happy Monkey", cursive;
+}
+.msg {
+    margin-top: 20px;
+    color: #2e4f4f;
+    font-weight: 500;
+    font-family: "Happy Monkey", cursive;
+}
+.btn:hover {
+    background-color: #3d6868;
+}
+@media screen and (max-width: 900px) {
+    .gamecontainer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .container {
+        grid-template-rows: 17vw 17vw 17vw;
+        grid-template-columns: 17vw 17vw 17vw;
+        margin-right: 0px;
+    }
+    .gameinfo {
+        margin-left: 0px;
+    }
+    .line {
+        width: 34vw;
+    }
+}
